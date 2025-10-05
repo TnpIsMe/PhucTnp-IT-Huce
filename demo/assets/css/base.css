@@ -1,0 +1,163 @@
+.text-white {
+    color: white !important;
+}
+
+/* ---- LANDSCAPE WARNING SCREEN ---- */
+#landscape-warning {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, #1c1a3a 0%, #0c0a1f 100%);
+    color: #e0eaff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.portrait #landscape-warning {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#landscape-warning .warning-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    background: rgba(28, 26, 58, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(173, 216, 230, 0.3);
+    box-shadow:
+        0 0 40px rgba(78, 88, 216, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.1),
+        inset 0 0 8px rgba(173, 216, 230, 0.2);
+    transform: scale(0.95);
+    opacity: 0;
+    animation: fadeInContent 0.6s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes fadeInContent {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#landscape-warning h1 {
+    font-family: 'Orbitron', 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(230, 230, 255, 0.8), 0 0 4px rgba(255, 255, 255, 1);
+}
+
+#landscape-warning h1:nth-of-type(2) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+#landscape-warning p {
+    font-size: 1.1rem;
+    color: #c0c8ff;
+    line-height: 1.5;
+    text-shadow: 0 0 6px rgba(192, 200, 255, 0.7);
+}
+
+#landscape-warning p:last-of-type {
+    margin-top: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#landscape-warning .stars-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+#landscape-warning .stars-bg::before,
+#landscape-warning .stars-bg::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image:
+        radial-gradient(circle, #fff 1px, transparent 1px),
+        radial-gradient(circle, #c0c8ff 1px, transparent 1px),
+        radial-gradient(circle, #fff 0.5px, transparent 0.5px);
+    background-size: 100px 100px, 150px 150px, 60px 60px;
+    background-position: 0 0, 50px 50px, 30px 30px;
+    opacity: 0;
+    animation: stars-move 30s linear infinite, fadeInStars 1s ease-out forwards;
+}
+
+#landscape-warning .stars-bg::after {
+    background-size: 150px 150px, 80px 80px, 120px 120px;
+    background-position: 75px 75px, 40px 40px, 10px 10px;
+    animation-duration: 45s;
+}
+
+@keyframes fadeInStars {
+    to {
+        opacity: 0.6;
+    }
+}
+
+@keyframes stars-move {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+#romantic-title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-family: 'Noto Sans', cursive;
+    text-align: center;
+    max-width: 60%;
+    line-height: 1.2;
+    word-wrap: break-word;
+    text-shadow: 0 0 15px #ff69b4, 0 0 5px #ffffff;
+    animation: glow 2s ease-in-out infinite alternate;
+    padding: 0 10px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff69b4, 0 0 5px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff69b4, 0 0 10px #ffffff;
+    }
+}
+
+@media (max-width: 600px) {
+    #romantic-title {
+        font-size: 1.5rem;
+    }
+}

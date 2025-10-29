@@ -1,0 +1,15 @@
+C:\Workspace\OOP\HotelManager\src\main\java\model\base\Managerable.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\base\Person.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\base\Reportable.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\Account.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\Customer.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\Invoice.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\Manager.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\Receptionist.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\Room.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\RoomBooking.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\RoomBookingService.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\RoomType.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\entity\Service.java
+C:\Workspace\OOP\HotelManager\src\main\java\model\report\Report.java
+C:\Workspace\OOP\HotelManager\src\main\java\view\Login.java

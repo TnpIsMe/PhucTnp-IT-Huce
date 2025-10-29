@@ -1,0 +1,15 @@
+controller\Receptionist.class
+controller\Room.class
+controller\RoomBooking.class
+controller\RoomType.class
+controller\Person.class
+controller\Invoice.class
+controller\RoomBookingService.class
+model\base\Reportable.class
+controller\Account.class
+controller\Customer.class
+controller\Manager.class
+view\Login.class
+model\report\Report.class
+controller\Service.class
+model\base\Managerable.class
